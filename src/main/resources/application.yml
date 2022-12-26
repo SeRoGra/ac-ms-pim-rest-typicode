@@ -9,7 +9,7 @@ feign:
 spring:
   clients:
     typicode:
-      url: https://jsonplaceholder.typicode.com/
+      url: https://jsonplaceholder.typicode.com
       
 server:
   port: 9514

@@ -20,7 +20,7 @@ import lombok.Data;
     "company"
 })
 @Data
-public class User {
+public class UserDTOResponse {
 
     @JsonProperty("id")
     private Integer id;
