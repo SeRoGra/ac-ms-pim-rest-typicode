@@ -1,0 +1,17 @@
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 200000
+        readTimeout: 200000
+        loggerLevel: basic
+
+spring:
+  clients:
+    typicode:
+      url: https://jsonplaceholder.typicode.com/
+      
+server:
+  port: 9514
+  servlet:
+    context-path: /ac-ms-pim-rest-typicode/api
