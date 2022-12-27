@@ -62,4 +62,18 @@ public class UserServiceImpl implements IUserService {
 		return response;
 	}
 
+	@Override
+	public UserDTOResponse getUserById(Integer userId) {
+
+		UserDTOResponse response = null;
+
+		try {
+			response = typicodeClient.getUserById(userId);
+		} catch (Exception e) {
+			log.error("Se presento la siguiente excepcion: " + e.getMessage());
+		}
+
+		return response;
+	}
+
 }

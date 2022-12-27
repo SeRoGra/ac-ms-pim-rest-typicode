@@ -10,6 +10,8 @@ public interface IUserService {
 	
 	public List<UserDTOResponse> getAllUsers();
 	
+	public UserDTOResponse getUserById(Integer userId);
+	
 	public List<AlbumDTOResponse> getAlbumsByUser(Integer userId);
 	
 	public List<PostDTOResponse> getPostByUser(Integer userId);

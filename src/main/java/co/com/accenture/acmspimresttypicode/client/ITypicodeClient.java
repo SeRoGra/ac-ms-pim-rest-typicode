@@ -20,6 +20,9 @@ public interface ITypicodeClient {
 	@RequestMapping(method = RequestMethod.GET, value = "/users")
 	public List<UserDTOResponse> getAllUsers();
 	
+	@RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
+	public UserDTOResponse getUserById(@PathVariable(name = "id") Integer userId);
+	
 	@RequestMapping(method = RequestMethod.GET, value = "/users/{id}/albums")
 	public List<AlbumDTOResponse> getAlbumsByUser(@PathVariable(name = "id") Integer userId);
 	

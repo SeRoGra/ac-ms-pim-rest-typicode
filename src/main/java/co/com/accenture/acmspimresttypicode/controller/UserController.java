@@ -33,6 +33,13 @@ public class UserController {
 		
 	}
 	
+	@GetMapping(path = "/{id}")
+	public ResponseEntity<UserDTOResponse> getUserById(@PathVariable(name = "id") Integer userId) {
+		
+		return new ResponseEntity<UserDTOResponse>(userService.getUserById(userId), HttpStatus.OK);
+		
+	}
+	
 	@GetMapping(path = "/{id}/albums")
 	public ResponseEntity<List<AlbumDTOResponse>> getAlbumsByUser(@PathVariable(name = "id") Integer userId) {
 		
